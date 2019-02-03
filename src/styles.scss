@@ -1,0 +1,24 @@
+@import './variables.scss';
+
+body {
+  font-family: 'Ibm Plex Sans';
+  font-size: 1rem;
+  background: $gray-100;
+}
+
+input {
+  font-size: 1rem;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+}
+
+h1, h2, h3, h4 {
+  margin-block-start: $base * 4;
+  margin-block-end: $base * 4;
+}

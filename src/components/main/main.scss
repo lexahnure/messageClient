@@ -1,0 +1,22 @@
+@import '../../variables.scss';
+
+.wrapper {
+  margin: 0 auto;
+  height: 100%;
+  width: 1200px;
+  
+  .main {
+    background: white;
+    border-radius: $base * 2;
+    padding: $base * 8;
+    margin: $base * 8;
+    min-width: calc(100% - #{$base * 32});
+    min-height: calc(100% - #{$base * 32});
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 100%;
+  }
+}

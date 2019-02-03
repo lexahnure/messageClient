@@ -1,0 +1,45 @@
+@import '../../variables.scss';
+
+.login {
+  margin: auto;
+  width: 284px;
+
+  .infomes {
+    text-align: center;
+    padding: $base * 4;
+    color: hsl(140, 48%, 24%);
+    background-color: hsl(140, 28%, 84%);
+  }
+
+  h2 {
+    max-width: fit-content;
+    width: auto;
+    margin: $base * 4 auto;
+  }
+
+  input {
+    padding: $base * 2;
+    display: block;
+
+    &[type=text], &[type=password], &[type=email] {
+      display: block;
+      margin: auto auto 0.75rem auto;   
+      width: 284px;
+      box-sizing: border-box;
+      &:-webkit-autofill {
+        border: 2px solid $gray-800;
+      }
+    }
+
+    &[type=submit] {
+      display: block;
+      margin: auto auto 0.75rem auto;
+      width: 284px;
+      border: 2px solid transparent;
+      &.accent {
+        background-color: $accent;
+        color: white;
+      }
+    }
+  }
+}

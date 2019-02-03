@@ -1,0 +1,39 @@
+@import '../../variables.scss';
+
+.navigation {
+  ul{
+    text-align: center;
+    li {
+      display: inline-block;
+      padding: $base ($base * 3);
+
+      a {
+        color: $gray-900;
+        text-decoration: none;
+        position: relative;
+        &.active {
+          color: $accent;
+          &::before {
+            content: '';
+            position: absolute;
+            animation: reveal ease-out .15s;
+            width: 100%;
+            height: $base * 0.75;
+            bottom: -($base * 1.5);
+            background: $accent;
+          }
+        }      
+      }
+    }
+  }
+}
+
+@keyframes reveal {
+  from {
+    transform-origin: center;
+    transform: scaleX(.1);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}

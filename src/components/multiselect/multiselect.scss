@@ -1,0 +1,68 @@
+@import '../../variables.scss';
+
+.multiselect {
+  margin: auto auto auto 0;
+  position: relative;
+  .field {
+    display: flex;
+    height: $base * 8;
+    border: 1px solid $gray-400;
+    margin: $base * 4 0;
+    &:focus-within {
+      outline: 1px solid saturate($accent, 40);
+    }
+    .select-box {
+      width: fit-content;
+      display: flex;
+      padding: $base;
+      .selected {
+        display: inline-flex;
+        padding: $base / 2;
+        background-color: $gray-100;
+        border: 1px solid $gray-300;
+        align-self: center;
+        margin-right: $base;
+        .remover {
+          padding: 0 $base;
+          cursor: pointer;
+        }
+      }
+    }
+    .input-box {
+      width: 100%;
+      input {
+        padding: $base;
+        margin: 0;
+        border: none;
+        width: 100%;
+        height: 100%;
+        font-family: 'Ibm Plex Sans';
+        font-size: 1rem;           
+        box-sizing: border-box;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  .expandable {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    top: 34px;
+    background-color: white;
+    .list {
+      list-style-type: none;
+      border: 1px solid $gray-400;
+      margin-top: 2px;
+      .list-item {
+        padding: $base $base * 3;
+        margin: $base 0;
+        &:hover {
+          background-color: $gray-100;
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,20 @@
+@import '../../variables.scss';
+
+.successReg {
+  margin: auto auto 0.75rem auto;
+  width: 400px;
+  text-align: center;
+  button {
+    display: block;
+    font-family: 'Ibm Plex Sans';
+    font-size: 1rem;
+    width: 284px;
+    margin: 0.75rem auto;
+    padding: $base * 2;
+    border: 2px solid transparent;
+    &.accent {
+      background-color: $accent;
+      color: white;
+    }
+  }
+}
